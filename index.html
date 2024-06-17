@@ -1,35 +1,92 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>codernakul (Nakul Singh)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
-  <!--<meta http-equiv="refresh" content="4; url=index_old.html" />-->
+	<title>Nakul Singh (codernakul)</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 </head>
 
-<body>
-<div id="particles">
-  <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Nakul Singh<a href="https://bit.ly/a-b-d" style="color: white;"></a></h2>
-      <hr color="#E83951" width="50%" size="4" style="margin: revert;">
-    <a href="mailto:contact.codernakul@gmail.com" style="color: white;"><i class="far fa-envelope" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/codernakul/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-    &nbsp
-	<a href="https://www.linkedin.com/in/er-nakul-singh/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://twitter.com/codernakul/" style="color: white;"><i class="fab fa-twitter" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://www.instagram.com/codernakul/" style="color: white;"><i class="fab fa-instagram" style="font-size: 2em;"></i></a>
-  </div>
-</div>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span><i class="fa fa-terminal" aria-hidden="true"></i>
+				</span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Nakul Singh</h1>
+					<p>
+						A fellow tech enthusiast here! Passionate about Cybersecurity and developement
+					</p>
+					<p id="quote">
+						
+					</p>
+					<p id="author">
+						
+					</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/er-nakul-singh/">LinkedIn</a></li>
+					<li><a href="https://github.com/codernakul/">GitHub</a></li>
+					<li><a href="mailto:contact.codernakul@gmail.com">E-mail</a></li>
+					<li><a href="https://www.instagram.com/codernakul/">Instagram</a></li>
+					<!--<li><a href="#elements">Elements</a></li>-->
+				</ul>
+			</nav>
+		</header>
+
+		<script>
+			const quote = document.getElementById("quote");
+			const author = document.getElementById("author");
+	
+			fetch("https://api.quotable.io/random")
+				.then(response => response.json())
+				.then(htmlContent => {
+					quote.innerHTML = "\"" + htmlContent.content + "\"";
+					author.innerHTML = "-" + htmlContent.author;
+				})
+				.catch(error => console.error(error));
+		</script>
+
+		<!-- Main -->
+		<div id="main">
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; Nakul Singh</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
