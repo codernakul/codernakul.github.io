@@ -18,6 +18,7 @@
 
 <body class="is-preload">
 
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -34,10 +35,21 @@
 						A fellow tech enthusiast here! Passionate about Cybersecurity and developement
 					</p>
 					<p id="quote">
-						
+
 					</p>
 					<p id="author">
-						
+						<script>
+							const quote = document.getElementById("quote");
+							const author = document.getElementById("author");
+
+							fetch("https://api.quotable.io/random")
+								.then(response => response.json())
+								.then(htmlContent => {
+									quote.innerHTML = "\"" + htmlContent.content + "\"";
+									author.innerHTML = "-" + htmlContent.author;
+								})
+								.catch(error => console.error(error));
+						</script>
 					</p>
 				</div>
 			</div>
@@ -51,19 +63,6 @@
 				</ul>
 			</nav>
 		</header>
-
-		<script>
-			const quote = document.getElementById("quote");
-			const author = document.getElementById("author");
-	
-			fetch("https://api.quotable.io/random")
-				.then(response => response.json())
-				.then(htmlContent => {
-					quote.innerHTML = "\"" + htmlContent.content + "\"";
-					author.innerHTML = "-" + htmlContent.author;
-				})
-				.catch(error => console.error(error));
-		</script>
 
 		<!-- Main -->
 		<div id="main">
