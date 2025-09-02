@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>n4ku1</title>
-    <link>https://nakul.tech/</link>
-    <description>Recent content on n4ku1</description>
+    <title>Arch on n4ku1</title>
+    <link>https://nakul.tech/tags/arch/</link>
+    <description>Recent content in Arch on n4ku1</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nakul.tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nakul.tech/tags/arch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Volume keys in DWM</title>
       <link>https://nakul.tech/posts/media-keys-volume/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://nakul.tech/posts/media-keys-volume/</guid>
       <description>How I configured volume keys in DWM</description>
-    </item>
-    <item>
-      <title>Hello World!</title>
-      <link>https://nakul.tech/posts/hello-world/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://nakul.tech/posts/hello-world/</guid>
-      <description>Gotta keep the tradition going...</description>
     </item>
   </channel>
 </rss>
