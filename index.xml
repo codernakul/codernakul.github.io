@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Nakul Singh</title>
+    <title>n4ku1</title>
     <link>https://nakul.tech/</link>
-    <description>Recent content on Nakul Singh</description>
+    <description>Recent content on n4ku1</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
@@ -14,13 +14,6 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://nakul.tech/posts/hello-world/</guid>
       <description>Gotta keep the tradition going...</description>
-    </item>
-    <item>
-      <title>Second</title>
-      <link>https://nakul.tech/posts/second/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://nakul.tech/posts/second/</guid>
-      <description>Desc Text.</description>
     </item>
   </channel>
 </rss>
