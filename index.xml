@@ -23,6 +23,13 @@
       <description>How I configured volume keys in DWM</description>
     </item>
     <item>
+      <title>Create GIFs using ffmpeg</title>
+      <link>https://nakul.tech/posts/ffmpeg-gifs/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://nakul.tech/posts/ffmpeg-gifs/</guid>
+      <description>Create animated GIFs using ffmpeg in command line</description>
+    </item>
+    <item>
       <title>Hello World!</title>
       <link>https://nakul.tech/posts/hello-world/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>

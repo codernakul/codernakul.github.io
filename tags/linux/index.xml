@@ -15,5 +15,12 @@
       <guid>https://nakul.tech/posts/python-local-server/</guid>
       <description>Create a local server in python in oneline</description>
     </item>
+    <item>
+      <title>Create GIFs using ffmpeg</title>
+      <link>https://nakul.tech/posts/ffmpeg-gifs/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://nakul.tech/posts/ffmpeg-gifs/</guid>
+      <description>Create animated GIFs using ffmpeg in command line</description>
+    </item>
   </channel>
 </rss>

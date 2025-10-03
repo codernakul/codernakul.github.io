@@ -143,8 +143,23 @@ This can be easily achieved by any computer that has python on it as it comes wi
 python -m http.server 1234 Here 1234 is the port number which can be any open port of your choice.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-29 00:00:00 +0000 UTC'>September 29, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;308 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer"><span title='2025-09-29 00:00:00 +0000 UTC'>September 29, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;309 words&nbsp;·&nbsp;Me</footer>
   <a class="entry-link" aria-label="post link to Python Local Server" href="https://nakul.tech/posts/python-local-server/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Create GIFs using ffmpeg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sometime you need a GIF for your README or presentations but those online convertors are very annoying filled to the brim with ads and limited options. So in order to get rid of this I tried ffmpeg to convert video files into GIFs. You must have ffmpeg installed in your device to proceed, download link here.
+The following command will do the trick:
+ffmpeg -ss [start_time] -t [duration/no_of_seconds_from_start] -i [input].[extension(.mp4)/(.mkv)] -vf &#34;fps=10,scale=[width]:[height]:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse&#34; -loop 0 [output].[extension(.mp4)/(.mkv)] Summary Let me break it down for you:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-11-15 00:00:00 +0000 UTC'>November 15, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;292 words&nbsp;·&nbsp;Me</footer>
+  <a class="entry-link" aria-label="post link to Create GIFs using ffmpeg" href="https://nakul.tech/posts/ffmpeg-gifs/"></a>
 </article>
     </main>
     
