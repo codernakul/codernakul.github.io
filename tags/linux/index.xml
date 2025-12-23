@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on n4ku1</title>
-    <link>https://nakul.tech/tags/linux/</link>
+    <link>https://codernakul.github.io/tags/linux/</link>
     <description>Recent content in Linux on n4ku1</description>
-    <generator>Hugo -- 0.150.1</generator>
+    <generator>Hugo -- 0.153.1</generator>
     <language>en</language>
     <lastBuildDate>Mon, 29 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nakul.tech/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://codernakul.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Local Server</title>
-      <link>https://nakul.tech/posts/python-local-server/</link>
+      <link>https://codernakul.github.io/posts/python-local-server/</link>
       <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://nakul.tech/posts/python-local-server/</guid>
+      <guid>https://codernakul.github.io/posts/python-local-server/</guid>
       <description>Create a local server in python in oneline</description>
     </item>
     <item>
       <title>Create GIFs using ffmpeg</title>
-      <link>https://nakul.tech/posts/ffmpeg-gifs/</link>
+      <link>https://codernakul.github.io/posts/ffmpeg-gifs/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://nakul.tech/posts/ffmpeg-gifs/</guid>
+      <guid>https://codernakul.github.io/posts/ffmpeg-gifs/</guid>
       <description>Create animated GIFs using ffmpeg in command line</description>
     </item>
   </channel>
