@@ -4,10 +4,17 @@
     <title>Posts on n4ku1</title>
     <link>https://codernakul.github.io/posts/</link>
     <description>Recent content in Posts on n4ku1</description>
-    <generator>Hugo -- 0.153.1</generator>
+    <generator>Hugo -- 0.154.5</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://codernakul.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FocusLock</title>
+      <link>https://codernakul.github.io/posts/focuslock/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://codernakul.github.io/posts/focuslock/</guid>
+      <description>Improve your focus by locking leisure apps.</description>
+    </item>
     <item>
       <title>Python Local Server</title>
       <link>https://codernakul.github.io/posts/python-local-server/</link>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>FocusLock | n4ku1</title>
+<meta name="keywords" content="Android, Application, Projects">
+<meta name="description" content="Improve your focus by locking leisure apps.">
+<meta name="author" content="Me">
+<link rel="canonical" href="https://codernakul.github.io/posts/focuslock/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://codernakul.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://codernakul.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://codernakul.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://codernakul.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://codernakul.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://codernakul.github.io/posts/focuslock/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://codernakul.github.io/posts/focuslock/">
+  <meta property="og:site_name" content="n4ku1">
+  <meta property="og:title" content="FocusLock">
+  <meta property="og:description" content="Improve your focus by locking leisure apps.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T00:00:00+00:00">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Application">
+    <meta property="article:tag" content="Projects">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FocusLock">
+<meta name="twitter:description" content="Improve your focus by locking leisure apps.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://codernakul.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "FocusLock",
+      "item": "https://codernakul.github.io/posts/focuslock/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "FocusLock",
+  "name": "FocusLock",
+  "description": "Improve your focus by locking leisure apps.",
+  "keywords": [
+    "Android", "Application", "Projects"
+  ],
+  "articleBody": "A Minimalist Approach to Digital Detox I built FocusLock because I found myself mindlessly scrolling through apps like Instagram and WhatsApp, wasting hours without realizing it. Existing blockers were either too easy to bypass or too bloated with features I didn’t need.\nI decided to build my own solution with a specific goal: create high-friction access to distracting apps. To make it interesting, I developed the entire project on a minimal Arch Linux setup, without using the heavy Android Studio environment.\nThe “No-IDE” Workflow Most Android apps are built using Android Studio, a massive piece of software that can be slow on older machines. I wanted to see if I could build a functional app using just a text editor and the terminal.\nThe Setup: I used a simple text editor to write code and the command line to compile it. The Automation: I wrote a custom script that handles everything with one command. It compiles the code, installs it on my phone, launches the app, and starts showing the logs immediately. This approach forced me to understand exactly how the Android build system works under the hood, stripping away the magic of complex development tools.\nSeeing the Truth (Usage Tracking) Before I could block the distractions, I needed to know the extent of the problem.\nAndroid phones usually show you your screen time for the day or week. However, the system actually keeps data for much longer, but most apps don’t show it to you. I wrote a custom engine that digs into Android’s history logs.\nThe Challenge: Phone manufacturers often delete old data to save space, and the system splits usage into “buckets” (daily, weekly, monthly) that can be hard to combine. The Solution: Instead of asking for a monthly summary, my code pulls 365 days of individual daily records and sums them up manually. This allowed me to visualize a full year of usage history, revealing exactly how many hours I had sunk into social media over the last 12 months. The “Loser” Lock The core feature of FocusLock is the blocker. I didn’t just want a “time limit” that I could ignore. I wanted a psychological barrier.\nI used two powerful Android permissions to achieve this:\nThe Watcher: A background service that monitors which app is currently on the screen. The Overlay: A permission that allows my app to draw over other apps. How it works: When I open a blocked app (like TikTok), FocusLock detects it instantly. Before the app can load, FocusLock throws a solid black screen over it.\nThis screen cannot be swiped away. It contains a text box and a prompt. To access the app, I am forced to type a humiliating phrase: “i am a loser”.\nIf I type it incorrectly, or if I try to close the keyboard, the app kicks me back to the home screen. If I type it correctly, the blocker grants me temporary access. The friction of having to type that phrase every time breaks the dopamine loop of unconscious scrolling.\nOvercoming Technical Challenges Building this wasn’t straightforward.\nThe Keyboard Problem: At first, the overlay screen was “unfocusable,” meaning I couldn’t type in the text box. I had to adjust the window settings to allow the keyboard to appear on top of my overlay while still blocking the app underneath.\nThe Infinite Loop: The first version had a major bug. When I typed the password and the overlay disappeared, the “Watcher” immediately saw the distracting app again and instantly re-blocked it. I had to implement a memory system where the app remembers that I just unlocked it, allowing a temporary “snooze” period.\nConclusion FocusLock started as a way to control my phone usage, but it became a lesson in minimalist development. By bypassing standard heavy tools and interacting directly with Android’s system services, I built a highly effective, lightweight tool that solves a real problem with a unique psychological twist.\n",
+  "wordCount" : "654",
+  "inLanguage": "en",
+  "datePublished": "2026-01-04T00:00:00Z",
+  "dateModified": "2026-01-04T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://codernakul.github.io/posts/focuslock/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "n4ku1",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codernakul.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://codernakul.github.io/" accesskey="h" title="n4ku1 (Alt + H)">n4ku1</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://codernakul.github.io/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codernakul.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codernakul.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      FocusLock
+    </h1>
+    <div class="post-description">
+      Improve your focus by locking leisure apps.
+    </div>
+    <div class="post-meta"><span title='2026-01-04 00:00:00 +0000 UTC'>January 4, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;654 words&nbsp;·&nbsp;Me
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="a-minimalist-approach-to-digital-detox">A Minimalist Approach to Digital Detox<a hidden class="anchor" aria-hidden="true" href="#a-minimalist-approach-to-digital-detox">#</a></h1>
+<p>I built FocusLock because I found myself mindlessly scrolling through apps like Instagram and WhatsApp, wasting hours without realizing it. Existing blockers were either too easy to bypass or too bloated with features I didn&rsquo;t need.</p>
+<p>I decided to build my own solution with a specific goal: create high-friction access to distracting apps. To make it interesting, I developed the entire project on a minimal Arch Linux setup, without using the heavy Android Studio environment.</p>
+<h2 id="the-no-ide-workflow">The &ldquo;No-IDE&rdquo; Workflow<a hidden class="anchor" aria-hidden="true" href="#the-no-ide-workflow">#</a></h2>
+<p>Most Android apps are built using Android Studio, a massive piece of software that can be slow on older machines. I wanted to see if I could build a functional app using just a text editor and the terminal.</p>
+<ul>
+<li><strong>The Setup:</strong> I used a simple text editor to write code and the command line to compile it.</li>
+<li><strong>The Automation:</strong> I wrote a custom script that handles everything with one command. It compiles the code, installs it on my phone, launches the app, and starts showing the logs immediately.</li>
+</ul>
+<p>This approach forced me to understand exactly how the Android build system works under the hood, stripping away the magic of complex development tools.</p>
+<h2 id="seeing-the-truth-usage-tracking">Seeing the Truth (Usage Tracking)<a hidden class="anchor" aria-hidden="true" href="#seeing-the-truth-usage-tracking">#</a></h2>
+<p>Before I could block the distractions, I needed to know the extent of the problem.</p>
+<p>Android phones usually show you your screen time for the day or week. However, the system actually keeps data for much longer, but most apps don&rsquo;t show it to you. I wrote a custom engine that digs into Android&rsquo;s history logs.</p>
+<ul>
+<li><strong>The Challenge:</strong> Phone manufacturers often delete old data to save space, and the system splits usage into &ldquo;buckets&rdquo; (daily, weekly, monthly) that can be hard to combine.</li>
+<li><strong>The Solution:</strong> Instead of asking for a monthly summary, my code pulls 365 days of individual daily records and sums them up manually. This allowed me to visualize a full year of usage history, revealing exactly how many hours I had sunk into social media over the last 12 months.</li>
+</ul>
+<h2 id="the-loser-lock">The &ldquo;Loser&rdquo; Lock<a hidden class="anchor" aria-hidden="true" href="#the-loser-lock">#</a></h2>
+<p>The core feature of FocusLock is the blocker. I didn&rsquo;t just want a &ldquo;time limit&rdquo; that I could ignore. I wanted a psychological barrier.</p>
+<p>I used two powerful Android permissions to achieve this:</p>
+<ol>
+<li><strong>The Watcher:</strong> A background service that monitors which app is currently on the screen.</li>
+<li><strong>The Overlay:</strong> A permission that allows my app to draw over other apps.</li>
+</ol>
+<p><strong>How it works:</strong>
+When I open a blocked app (like TikTok), FocusLock detects it instantly. Before the app can load, FocusLock throws a solid black screen over it.</p>
+<p>This screen cannot be swiped away. It contains a text box and a prompt. To access the app, I am forced to type a humiliating phrase: <em>&ldquo;i am a loser&rdquo;</em>.</p>
+<p>If I type it incorrectly, or if I try to close the keyboard, the app kicks me back to the home screen. If I type it correctly, the blocker grants me temporary access. The friction of having to type that phrase every time breaks the dopamine loop of unconscious scrolling.</p>
+<h2 id="overcoming-technical-challenges">Overcoming Technical Challenges<a hidden class="anchor" aria-hidden="true" href="#overcoming-technical-challenges">#</a></h2>
+<p>Building this wasn&rsquo;t straightforward.</p>
+<p><strong>The Keyboard Problem:</strong>
+At first, the overlay screen was &ldquo;unfocusable,&rdquo; meaning I couldn&rsquo;t type in the text box. I had to adjust the window settings to allow the keyboard to appear on top of my overlay while still blocking the app underneath.</p>
+<p><strong>The Infinite Loop:</strong>
+The first version had a major bug. When I typed the password and the overlay disappeared, the &ldquo;Watcher&rdquo; immediately saw the distracting app again and instantly re-blocked it. I had to implement a memory system where the app remembers that I just unlocked it, allowing a temporary &ldquo;snooze&rdquo; period.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>FocusLock started as a way to control my phone usage, but it became a lesson in minimalist development. By bypassing standard heavy tools and interacting directly with Android&rsquo;s system services, I built a highly effective, lightweight tool that solves a real problem with a unique psychological twist.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://codernakul.github.io/tags/android/">Android</a></li>
+      <li><a href="https://codernakul.github.io/tags/application/">Application</a></li>
+      <li><a href="https://codernakul.github.io/tags/projects/">Projects</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://codernakul.github.io/posts/python-local-server/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Python Local Server</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://codernakul.github.io/">n4ku1</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
