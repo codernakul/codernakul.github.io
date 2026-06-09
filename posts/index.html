@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - n4ku1">
 <meta name="author" content="">
 <link rel="canonical" href="https://codernakul.github.io/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://codernakul.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://codernakul.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://codernakul.github.io/favicon-32x32.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://codernakul.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://codernakul.github.io/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://codernakul.github.io/posts/index.xml" title="rss">
 <link rel="alternate" hreflang="en" href="https://codernakul.github.io/posts/">
 <noscript>
     <style>
@@ -40,30 +40,39 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+            .toc {
+                background: var(--entry);
             }
         }
 
     </style>
-</noscript><meta property="og:url" content="https://codernakul.github.io/posts/">
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://codernakul.github.io/posts/">
   <meta property="og:site_name" content="n4ku1">
   <meta property="og:title" content="Posts">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Posts">
 
 
 <script type="application/ld+json">
@@ -81,31 +90,19 @@
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
+    <header class="header">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://codernakul.github.io/" accesskey="h" title="n4ku1 (Alt + H)">n4ku1</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -121,7 +118,7 @@
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://codernakul.github.io/archives/" title="Archive">
                     <span>Archive</span>
@@ -149,6 +146,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Minimal Android Dev Setup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Building Android Apps on Arch Linux Without Android Studio If you want to build an Android app, the official recommendation is to download Android Studio. However, Android Studio is a massive application. It consumes gigabytes of RAM, takes a long time to index files, and can make older hardware grind to a halt.
+If you are using Arch Linux, you likely appreciate a system that is lightweight, fast, and exactly what you make of it. You can apply this same philosophy to Android development. You do not need a heavy Integrated Development Environment (IDE) to build an app. All you need is the Android Software Development Kit (SDK), a text editor, and the command line.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-04-04 00:00:00 +0000 UTC'>April 4, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>827 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
+  <a class="entry-link" aria-label="post link to Minimal Android Dev Setup" href="https://codernakul.github.io/posts/minimal-android-env/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">FocusLock
     </h2>
   </header>
@@ -157,7 +170,9 @@
 I decided to build my own solution with a specific goal: create high-friction access to distracting apps. To make it interesting, I developed the entire project on a minimal Arch Linux setup, without using the heavy Android Studio environment.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-04 00:00:00 +0000 UTC'>January 4, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;654 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-04 00:00:00 +0000 UTC'>January 4, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>654 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to FocusLock" href="https://codernakul.github.io/posts/focuslock/"></a>
 </article>
 
@@ -172,7 +187,9 @@ This can be easily achieved by any computer that has python on it as it comes wi
 python -m http.server 1234 Here 1234 is the port number which can be any open port of your choice.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-29 00:00:00 +0000 UTC'>September 29, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;309 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2025-09-29 00:00:00 +0000 UTC'>September 29, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>309 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to Python Local Server" href="https://codernakul.github.io/posts/python-local-server/"></a>
 </article>
 
@@ -187,7 +204,9 @@ I wrote a small script that changes the volume based on the parameters passed vi
 Identifying Keys You first need to identify which keys toggle the volume, what is their assigned tag.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-02 00:00:00 +0000 UTC'>September 2, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;303 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2025-09-02 00:00:00 +0000 UTC'>September 2, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>303 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to Volume keys in DWM" href="https://codernakul.github.io/posts/media-keys-volume/"></a>
 </article>
 
@@ -202,7 +221,9 @@ The following command will do the trick:
 ffmpeg -ss [start_time] -t [duration/no_of_seconds_from_start] -i [input].[extension(.mp4)/(.mkv)] -vf &#34;fps=10,scale=[width]:[height]:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse&#34; -loop 0 [output].[extension(.mp4)/(.mkv)] Summary Let me break it down for you:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-11-15 00:00:00 +0000 UTC'>November 15, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;292 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2024-11-15 00:00:00 +0000 UTC'>November 15, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>292 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to Create GIFs using ffmpeg" href="https://codernakul.github.io/posts/ffmpeg-gifs/"></a>
 </article>
 
@@ -215,7 +236,9 @@ ffmpeg -ss [start_time] -t [duration/no_of_seconds_from_start] -i [input].[exten
     <p>In computer security, Capture the Flag (CTF), a type of wargame, is a computer security competition. CTF contests are usually designed to serve as an educational exercise to give participants experience in securing a machine, as well as conducting and reacting to the sort of attacks found in the real world (i.e., bug bounty programs in professional settings). Reverse-engineering, network sniffing, protocol analysis, system administration, programming, and cryptoanalysis are all skills which have been required by Security professionals in the past.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-10-12 00:00:00 +0000 UTC'>October 12, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;530 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2024-10-12 00:00:00 +0000 UTC'>October 12, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>530 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to CTFs - Capture the Flag" href="https://codernakul.github.io/posts/capture-the-flag/"></a>
 </article>
 
@@ -229,7 +252,9 @@ ffmpeg -ss [start_time] -t [duration/no_of_seconds_from_start] -i [input].[exten
 Thanks for reading!
 </p>
   </div>
-  <footer class="entry-footer"><span title='2021-01-01 00:00:00 +0000 UTC'>January 1, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;21 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer">
+
+<span title='2021-01-01 00:00:00 +0000 UTC'>January 1, 2021</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>21 words</span>&nbsp;·&nbsp;<span>Me</span></footer>
   <a class="entry-link" aria-label="post link to Hello World!" href="https://codernakul.github.io/posts/hello-world/"></a>
 </article>
     </main>
@@ -237,22 +262,31 @@ Thanks for reading!
 <footer class="footer">
         <span>&copy; 2026 <a href="https://codernakul.github.io/">n4ku1</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -279,25 +313,25 @@ Thanks for reading!
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

@@ -4,10 +4,19 @@
     <title>n4ku1</title>
     <link>https://codernakul.github.io/</link>
     <description>Recent content on n4ku1</description>
-    <generator>Hugo -- 0.154.5</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://codernakul.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minimal Android Dev Setup</title>
+      <link>https://codernakul.github.io/posts/minimal-android-env/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://codernakul.github.io/posts/minimal-android-env/</guid>
+      <description>&lt;h1 id=&#34;building-android-apps-on-arch-linux-without-android-studio&#34;&gt;Building Android Apps on Arch Linux Without Android Studio&lt;/h1&gt;
+&lt;p&gt;If you want to build an Android app, the official recommendation is to download Android Studio. However, Android Studio is a massive application. It consumes gigabytes of RAM, takes a long time to index files, and can make older hardware grind to a halt.&lt;/p&gt;
+&lt;p&gt;If you are using Arch Linux, you likely appreciate a system that is lightweight, fast, and exactly what you make of it. You can apply this same philosophy to Android development. You do not need a heavy Integrated Development Environment (IDE) to build an app. All you need is the Android Software Development Kit (SDK), a text editor, and the command line.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FocusLock</title>
       <link>https://codernakul.github.io/posts/focuslock/</link>
