@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>OS Summit 2026 | n4ku1</title>
+<meta name="keywords" content="Conference">
+<meta name="description" content="I went to OS Summit India 2026 thanks to LF Foundation">
+<meta name="author" content="Me">
+<link rel="canonical" href="https://codernakul.github.io/posts/ossummit-2026/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://codernakul.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://codernakul.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://codernakul.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://codernakul.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://codernakul.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://codernakul.github.io/posts/ossummit-2026/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://codernakul.github.io/posts/ossummit-2026/">
+  <meta property="og:site_name" content="n4ku1">
+  <meta property="og:title" content="OS Summit 2026">
+  <meta property="og:description" content="I went to OS Summit India 2026 thanks to LF Foundation">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-06-19T00:00:00+00:00">
+    <meta property="article:tag" content="Conference">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OS Summit 2026">
+  <meta name="twitter:description" content="I went to OS Summit India 2026 thanks to LF Foundation">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://codernakul.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "OS Summit 2026",
+      "item": "https://codernakul.github.io/posts/ossummit-2026/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OS Summit 2026",
+  "name": "OS Summit 2026",
+  "description": "I went to OS Summit India 2026 thanks to LF Foundation",
+  "keywords": [
+    "Conference"
+  ],
+  "articleBody": "I am extremely grateful to Linux Foundation for giving me the opportunity to attend Open Source Summit India 2026. I learned a lot and met a lot of new people out there, I tried to log my learnings throughout using some makeshift notes. Until I write a proper draft I will post whatever I wrote during the 2 day event.\nDay - 01 Key Note 01 Consumption -\u003e Global Leardership LFX insights: look into this PARAS under CDAC Agentic AI, tokenomics, OCUDU Key Note 02 From Bots to Agents(Reactive to Autonomous) Key Note 03 Linus PR should have explanation because nobody looks at code now Linus hasn’t in decades Git+Email+Google more than enough for everything, work with people not with tools OS operates on Trust Java version of Git Logic errors -\u003e not memory safe Kernel development -\u003e start with drivers A lot of efforts getting wasted in bug reports due AI slop Suggestive patch, a human element during bug report Zero to demo LLM works here but Zero to prod? Main question lies here LLMs mostly for demo stuff Key Note 04 DPDAA coming in India, basically a privacy enforcement policy Trust registry Resolution is 792(Iata) Hey Yocto Buid me a custom linux Customized opinionated Linux Distro LTS releases for embedded After 5.3 things changed For a linux image need: Bootloader A kernel image ARM/RISCV(need a Device Tree Blob DTB - for laying out hardware maps) root file system(clib, init, apps) Poky dont use because it is not as secure distro is a superset of image, image is customized according to scenarios BusyBox: goto for embedded linux BB: BitBake I break things AI fixes them: Workflows good at automating but not at fixing stuff hence agentic Agentic CI Traditional CI: Fails -\u003e Notifications on error but in Agentic AI: Fails -\u003e Automated PR+RCA GitHub Actions as trigger + LangGraph as orchestration + Gemini as reasoning engine + Docker Full observability is important in LangGraph Following are measure for secure operations Human in the loop is a must here Secure execution and validation https://github.com/PR3MM/ Cannot fix any architecture level of failures CI/CD Basics: Choice fatigue for tools Main question arises where to actually start Modern development consists a lot things to keep in check API first development break the dependency change Monolith vs Microservices Monolith obviously easy to build but not really scale-able APIs + Microservices + Containerization + CI/CD Tekton Architecture: Kubernetes yaml files something for CI ArgoCD: GitOps API server Repo server App controller Redis cache Using ArgoCD makes your deployment declarative API Gateways Which API should we use? REST GraphQL: flexible frontend queries Event driven But what if an event driven system a operation is supposed to be canceled later? Scaling issues: instead of traditional scaling use kubernetes In kubernetes we have got pods In serverless we have to make a request CNCF scaling tools: Knative, Karmada, Karpenter all are kubernetes native https://landscape.cncf.io Graduated and incubating CNCF projects are good ones as they have more support from developers Recipes and Runtimes: Basic concepts on Containerization Provenance? Supply chain poisoning? chroot: sys-call to change process of a child, first instance of process isolation FreeBSD Jails -\u003e Solaris Containers -\u003e LXC linux containers cgroups(control groups what resources each process uses), namespaces Containerizing our micro-services? -\u003e micro-bakery? For Containerizing need reproducible environment, recipe Image hardening to reduce the attack surface remove the unnecessary packages Multi-stage builds to reduce file size of docker image for them Using either alpine as a base image, but for python you will have to see a lot of workarounds or just distroless, but in here things can be complex There is also a third approach aka chisel Rockcraft another OCI(open container initiative) compliant tools declarative not imperative like bash pebble process orchestrator chisel -\u003e basically ubuntu but with just what is needed .rock file is oci archive Multipass great way to spin-up a VM Without chisel still there is filesystem in image for any attacker to exploit Now with rockcraft we have a bare base Without bash, how does one debug a chisel image? for this we coreutils_bins in yaml To avoid container escape run as non root user preferably using podman, since docker by default needs root permission Journey of a packet: For getting the ping of both the nodes: tcpdump -eni any ‘arp or icmp’ Why arp is actually an issue? To connect two different pods across we use encapsulation building an overlay network with TUN TUN used encapsulate using a golang program TLDR internode pod communication here undelay stays untouched Consequences of L2 switching ARP spoofing ARP flooding, different IPs of pods Natural question, what if we can remove L2? Building a purely L3 routing Speed at which packets are arriving is not syncing with stuff hence packet loss Packet journey with VXLAN implementation From IP deterministically computer the MAC, the IP that you gave yourself?? Bridged pods+manual overlay -\u003e Routed pods+manual overlay -\u003e Routed pods+standard kernel overlay WIth BGP kubernetes coming very close to the hardware VXLAN is a known protocol not a lot of encapsulation is required Every solution removes a bottleneck but introduces a tradeoff Day - 02 Key Note 03 Valkey Valkey high performance key-value data store, sub millisecond access at any scale Caching is architecture not band aid, Cache first design Valkey removes redundant operations In LLM will save cost on semantically same queries https://valkey.io Key Note 04 IBM Geeta Gurnani Open source is powering AI acceleration but widening the Trust Gap Risk Atlas Nexus https://github.com/IBM/risk-atlas-nexus/ India specific governance framework - MANAV Scope of alignments: K R Varshney Key Note 05 Rust in OS Greg git.sr.ht/~gregkh/presentation-rust/ Search pragmatic engineer Linux CVE2024-43884 C scoped locks and allocations Test the bugs at compile time Rust can prevent a huge majority of security bugs at build time itself All data is evil, evaluate all types of data 80% of CVEs would be gone if code was written in Rust Rust is going to be the bedrock of android learn it Rust allows you to focus on logic more taking care of the trivial things Rust experiment is over now people are using it actively Make the compiler do the work More developers, less maintainers Valkey Chaos engineering for valkey via Valkey fuzzer demo Mostly a caching solution Standalone architecture or Cluster mode architecture, horizontal scaling Full mesh gossip protocol (TCP) Shard: Independent Primary -\u003e Replica, design of Valkey Bugs: split brain- data divergence, stuck failover- partial outage, topology divergence- wrong ownership Chaos fuzzer+Agentic AI between dev and prod Our fuzzer will try to kill the primaries not the replicas Automated bug detection in this chaos demo Why it failed was quorum loss(not able to get the signal which one was primary which one replica) Multi AZ always on, 3+ shards minimum, force failover testing, connection pool drain, chaos Test https://github.com/valkey-io/valkey-fuzzer Dont trash it, Hack it Went in the wrong room Hey AI train Llama From slides, couldn’t understand shit Next evolution of Java @danieloh30 Why tuning required? Cold start, large images, memory consumption When a new container spawns up due to overload the java app takes time to start which in turn misinterprets kubernetes into unresponsive Kubernetes native java with quarkus Jib lean container images, also allows for fast updates since all the things are layered GraalVM native images Quarkus framework level optimizations Class data sharing for optimizing startup applications CRaC - coordinated response at checkpoint Running on JVM easy not on GraalVM Quarkus+Kubernetes is the way to go to put all tools together natively Refer images as well Bootloader on Android Google introduces GBL rust based Developed within AOSP Designed as UEFI Firmware stack -\u003e UEFI Protocols(RNG. BlockIO) -\u003e GBL(UEFI App) -\u003e Android kernel Protocols required for GBL to work Cant understand shit she is just reading code from the slides Flattened image tree(FIT) currently used in uboot allows kernel images to be selected Boot control protocol? OTA? GBL mandates atleast two slots Boot memory protocol? Fastboot for custom transport layer Standard UEFI boot path GBL Android-16 onwards adopt GBL ESP partition has to be introduced, a mandate Now GBL can be debugged using trace32, but like rust it has different structures according to hardware Practical perfetto @stefan-lengfeld Perfetto, why tracing? allows you more dimension to inspect your code Tracing on android ui.perfetto.dev codeberg.org/lengfeld/perfetto-yocto-tutorial Check the above url for tutorial on perfetto In normal cases perfetto writes the configuration itself Perfetto advanced usages Built in histogram and stats Rectangle select, try that Android’s frame timeline -\u003e every frame has additional information: jank type Android’s logcat support works only with userdebug builds Another server level tip is binder and flows Checkout release notes of perfetto for some awesome stuff Writing for machines Came late as I had to go for a short bathroom break Context gap Three different things: Rule files, Specs, Prompting pattern Agents.md should be cut to the chase First things to do after this session Couldn’t understand a lot of stuff but it was kind-of good to look into, refer pdf Agentic Delivery Refer from slides — End of Event —\n",
+  "wordCount" : "1514",
+  "inLanguage": "en",
+  "datePublished": "2026-06-19T00:00:00Z",
+  "dateModified": "2026-06-19T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://codernakul.github.io/posts/ossummit-2026/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "n4ku1",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codernakul.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://codernakul.github.io/" accesskey="h" title="n4ku1 (Alt + H)">n4ku1</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://codernakul.github.io/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codernakul.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codernakul.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      OS Summit 2026
+    </h1>
+    <div class="post-description">
+      I went to OS Summit India 2026 thanks to LF Foundation
+    </div>
+    <div class="post-meta">
+
+<span title='2026-06-19 00:00:00 +0000 UTC'>June 19, 2026</span>&nbsp;·&nbsp;<span>8 min</span>&nbsp;·&nbsp;<span>1514 words</span>&nbsp;·&nbsp;<span>Me</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>I am extremely grateful to Linux Foundation for giving me the opportunity to attend Open Source Summit India 2026. I learned a lot and met a lot of new people out there, I tried to log my learnings throughout using some makeshift notes. Until I write a proper draft I will post whatever I wrote during the 2 day event.</p>
+<h1 id="day---01">Day - 01<a hidden class="anchor" aria-hidden="true" href="#day---01">#</a></h1>
+<h1 id="key-note-01">Key Note 01<a hidden class="anchor" aria-hidden="true" href="#key-note-01">#</a></h1>
+<ul>
+<li>Consumption -&gt; Global Leardership</li>
+<li>LFX insights: look into this</li>
+<li>PARAS under CDAC</li>
+<li>Agentic AI, tokenomics, OCUDU</li>
+</ul>
+<h1 id="key-note-02">Key Note 02<a hidden class="anchor" aria-hidden="true" href="#key-note-02">#</a></h1>
+<ul>
+<li>From Bots to Agents(Reactive to Autonomous)</li>
+</ul>
+<h1 id="key-note-03-linus">Key Note 03 Linus<a hidden class="anchor" aria-hidden="true" href="#key-note-03-linus">#</a></h1>
+<ul>
+<li>PR should have explanation because nobody looks at code now Linus hasn&rsquo;t in decades</li>
+<li>Git+Email+Google more than enough for everything, work with people not with tools OS operates on Trust</li>
+<li>Java version of Git</li>
+<li>Logic errors -&gt; not memory safe</li>
+<li>Kernel development -&gt; start with drivers</li>
+<li>A lot of efforts getting wasted in bug reports due AI slop</li>
+<li>Suggestive patch, a human element during bug report</li>
+<li>Zero to demo LLM works here but Zero to prod? Main question lies here</li>
+<li>LLMs mostly for demo stuff</li>
+</ul>
+<h1 id="key-note-04">Key Note 04<a hidden class="anchor" aria-hidden="true" href="#key-note-04">#</a></h1>
+<ul>
+<li>DPDAA coming in India, basically a privacy enforcement policy</li>
+<li>Trust registry</li>
+<li>Resolution is 792(Iata)</li>
+</ul>
+<h1 id="hey-yocto-buid-me-a-custom-linux">Hey Yocto Buid me a custom linux<a hidden class="anchor" aria-hidden="true" href="#hey-yocto-buid-me-a-custom-linux">#</a></h1>
+<ul>
+<li>Customized opinionated Linux Distro</li>
+<li>LTS releases for embedded</li>
+<li>After 5.3 things changed</li>
+<li>For a linux image need:
+<ul>
+<li>Bootloader</li>
+<li>A kernel image</li>
+<li>ARM/RISCV(need a Device Tree Blob DTB - for laying out hardware maps)</li>
+<li>root file system(clib, init, apps)</li>
+</ul>
+</li>
+<li>Poky dont use because it is not as secure</li>
+<li>distro is a superset of image, image is customized according to scenarios</li>
+<li>BusyBox: goto for embedded linux</li>
+<li>BB: BitBake</li>
+</ul>
+<h1 id="i-break-things-ai-fixes-them">I break things AI fixes them:<a hidden class="anchor" aria-hidden="true" href="#i-break-things-ai-fixes-them">#</a></h1>
+<ul>
+<li>Workflows good at automating but not at fixing stuff hence agentic</li>
+<li>Agentic CI</li>
+<li>Traditional CI: Fails -&gt; Notifications on error but in Agentic AI: Fails -&gt; Automated PR+RCA</li>
+<li>GitHub Actions as trigger + LangGraph as orchestration + Gemini as reasoning engine + Docker</li>
+<li>Full observability is important in LangGraph</li>
+<li>Following are measure for secure operations
+<ul>
+<li>Human in the loop is a must here</li>
+<li>Secure execution and validation</li>
+</ul>
+</li>
+<li><a href="https://github.com/PR3MM/">https://github.com/PR3MM/</a></li>
+<li>Cannot fix any architecture level of failures</li>
+</ul>
+<h1 id="cicd-basics">CI/CD Basics:<a hidden class="anchor" aria-hidden="true" href="#cicd-basics">#</a></h1>
+<ul>
+<li>Choice fatigue for tools</li>
+<li>Main question arises where to actually start</li>
+<li>Modern development consists a lot things to keep in check</li>
+<li>API first development break the dependency change</li>
+<li>Monolith vs Microservices</li>
+<li>Monolith obviously easy to build but not really scale-able</li>
+<li>APIs + Microservices + Containerization + CI/CD</li>
+<li>Tekton Architecture: Kubernetes yaml files something for CI</li>
+<li>ArgoCD: GitOps
+<ul>
+<li>API server</li>
+<li>Repo server</li>
+<li>App controller</li>
+<li>Redis cache</li>
+</ul>
+</li>
+<li>Using ArgoCD makes your deployment declarative</li>
+<li>API Gateways</li>
+<li>Which API should we use?
+<ul>
+<li>REST</li>
+<li>GraphQL: flexible frontend queries</li>
+<li>Event driven</li>
+</ul>
+</li>
+<li>But what if an event driven system a operation is supposed to be canceled later?</li>
+<li>Scaling issues: instead of traditional scaling use kubernetes</li>
+<li>In kubernetes we have got pods</li>
+<li>In serverless we have to make a request</li>
+<li>CNCF scaling tools: Knative, Karmada, Karpenter all are kubernetes native</li>
+<li><a href="https://landscape.cncf.io">https://landscape.cncf.io</a></li>
+<li>Graduated and incubating CNCF projects are good ones as they have more support from developers</li>
+</ul>
+<h1 id="recipes-and-runtimes">Recipes and Runtimes:<a hidden class="anchor" aria-hidden="true" href="#recipes-and-runtimes">#</a></h1>
+<ul>
+<li>Basic concepts on Containerization</li>
+<li>Provenance? Supply chain poisoning?</li>
+<li>chroot: sys-call to change process of a child, first instance of process isolation</li>
+<li>FreeBSD Jails -&gt; Solaris Containers -&gt; LXC linux containers cgroups(control groups what resources each process uses), namespaces</li>
+<li>Containerizing our micro-services? -&gt; micro-bakery?</li>
+<li>For Containerizing need reproducible environment, recipe</li>
+<li>Image hardening to reduce the attack surface remove the unnecessary packages</li>
+<li>Multi-stage builds to reduce file size of docker image for them</li>
+<li>Using either alpine as a base image, but for python you will have to see a lot of workarounds or just distroless, but in here things can be complex</li>
+<li>There is also a third approach aka chisel</li>
+<li>Rockcraft another OCI(open container initiative) compliant tools
+<ul>
+<li>declarative not imperative like bash</li>
+<li>pebble process orchestrator</li>
+<li>chisel -&gt; basically ubuntu but with just what is needed</li>
+</ul>
+</li>
+<li>.rock file is oci archive</li>
+<li>Multipass great way to spin-up a VM</li>
+<li>Without chisel still there is filesystem in image for any attacker to exploit</li>
+<li>Now with rockcraft we have a bare base</li>
+<li>Without bash, how does one debug a chisel image? for this we coreutils_bins in yaml</li>
+<li>To avoid container escape run as non root user preferably using podman, since docker by default needs root permission</li>
+</ul>
+<h1 id="journey-of-a-packet">Journey of a packet:<a hidden class="anchor" aria-hidden="true" href="#journey-of-a-packet">#</a></h1>
+<ul>
+<li>For getting the ping of both the nodes:</li>
+<li>tcpdump -eni any &lsquo;arp or icmp&rsquo;</li>
+<li>Why arp is actually an issue?</li>
+<li>To connect two different pods across we use encapsulation</li>
+<li>building an overlay network with TUN</li>
+<li>TUN used encapsulate using a golang program</li>
+<li>TLDR internode pod communication here undelay stays untouched</li>
+<li>Consequences of L2 switching
+<ul>
+<li>ARP spoofing</li>
+<li>ARP flooding, different IPs of pods</li>
+<li>Natural question, what if we can remove L2?</li>
+</ul>
+</li>
+<li>Building a purely L3 routing
+<ul>
+<li>Speed at which packets are arriving is not syncing with stuff hence packet loss</li>
+</ul>
+</li>
+<li>Packet journey with VXLAN implementation</li>
+<li>From IP deterministically computer the MAC, the IP that you gave yourself??</li>
+<li>Bridged pods+manual overlay -&gt; Routed pods+manual overlay -&gt; Routed pods+standard kernel overlay</li>
+<li>WIth BGP kubernetes coming very close to the hardware</li>
+<li>VXLAN is a known protocol not a lot of encapsulation is required</li>
+<li>Every solution removes a bottleneck but introduces a tradeoff</li>
+</ul>
+<h1 id="day---02">Day - 02<a hidden class="anchor" aria-hidden="true" href="#day---02">#</a></h1>
+<h1 id="key-note-03-valkey">Key Note 03 Valkey<a hidden class="anchor" aria-hidden="true" href="#key-note-03-valkey">#</a></h1>
+<ul>
+<li>Valkey high performance key-value data store, sub millisecond access at any scale</li>
+<li>Caching is architecture not band aid, Cache first design</li>
+<li>Valkey removes redundant operations</li>
+<li>In LLM will save cost on semantically same queries</li>
+<li><a href="https://valkey.io">https://valkey.io</a></li>
+</ul>
+<h1 id="key-note-04-ibm-geeta-gurnani">Key Note 04 IBM Geeta Gurnani<a hidden class="anchor" aria-hidden="true" href="#key-note-04-ibm-geeta-gurnani">#</a></h1>
+<ul>
+<li>Open source is powering AI acceleration but widening the Trust Gap</li>
+<li>Risk Atlas Nexus <a href="https://github.com/IBM/risk-atlas-nexus/">https://github.com/IBM/risk-atlas-nexus/</a></li>
+<li>India specific governance framework - MANAV</li>
+<li>Scope of alignments: K R Varshney</li>
+</ul>
+<h1 id="key-note-05-rust-in-os-greg">Key Note 05 Rust in OS Greg<a hidden class="anchor" aria-hidden="true" href="#key-note-05-rust-in-os-greg">#</a></h1>
+<ul>
+<li>git.sr.ht/~gregkh/presentation-rust/</li>
+<li>Search pragmatic engineer Linux</li>
+<li>CVE2024-43884</li>
+<li>C scoped locks and allocations</li>
+<li>Test the bugs at compile time</li>
+<li>Rust can prevent a huge majority of security bugs at build time itself</li>
+<li>All data is evil, evaluate all types of data</li>
+<li>80% of CVEs would be gone if code was written in Rust</li>
+<li>Rust is going to be the bedrock of android learn it</li>
+<li>Rust allows you to focus on logic more taking care of the trivial things</li>
+<li>Rust experiment is over now people are using it actively</li>
+<li>Make the compiler do the work</li>
+<li>More developers, less maintainers</li>
+</ul>
+<h1 id="valkey">Valkey<a hidden class="anchor" aria-hidden="true" href="#valkey">#</a></h1>
+<ul>
+<li>Chaos engineering for valkey via Valkey fuzzer demo</li>
+<li>Mostly a caching solution</li>
+<li>Standalone architecture or</li>
+<li>Cluster mode architecture, horizontal scaling</li>
+<li>Full mesh gossip protocol (TCP)</li>
+<li>Shard: Independent Primary -&gt; Replica, design of Valkey</li>
+<li>Bugs: split brain- data divergence, stuck failover- partial outage, topology divergence- wrong ownership</li>
+<li>Chaos fuzzer+Agentic AI between dev and prod</li>
+<li>Our fuzzer will try to kill the primaries not the replicas</li>
+<li>Automated bug detection in this chaos demo</li>
+<li>Why it failed was quorum loss(not able to get the signal which one was primary which one replica)</li>
+<li>Multi AZ always on, 3+ shards minimum, force failover testing, connection pool drain, chaos Test</li>
+<li><a href="https://github.com/valkey-io/valkey-fuzzer">https://github.com/valkey-io/valkey-fuzzer</a></li>
+</ul>
+<h1 id="dont-trash-it-hack-it">Dont trash it, Hack it<a hidden class="anchor" aria-hidden="true" href="#dont-trash-it-hack-it">#</a></h1>
+<ul>
+<li>Went in the wrong room</li>
+</ul>
+<h1 id="hey-ai-train-llama">Hey AI train Llama<a hidden class="anchor" aria-hidden="true" href="#hey-ai-train-llama">#</a></h1>
+<ul>
+<li>From slides, couldn&rsquo;t understand shit</li>
+</ul>
+<h1 id="next-evolution-of-java-danieloh30">Next evolution of Java @danieloh30<a hidden class="anchor" aria-hidden="true" href="#next-evolution-of-java-danieloh30">#</a></h1>
+<ul>
+<li>Why tuning required? Cold start, large images, memory consumption</li>
+<li>When a new container spawns up due to overload the java app takes time to start which in turn misinterprets kubernetes into unresponsive</li>
+<li>Kubernetes native java with quarkus</li>
+<li>Jib lean container images, also allows for fast updates since all the things are layered</li>
+<li>GraalVM native images</li>
+<li>Quarkus framework level optimizations</li>
+<li>Class data sharing for optimizing startup applications</li>
+<li>CRaC - coordinated response at checkpoint</li>
+<li>Running on JVM easy not on GraalVM</li>
+<li>Quarkus+Kubernetes is the way to go to put all tools together natively</li>
+<li>Refer images as well</li>
+</ul>
+<h1 id="bootloader-on-android">Bootloader on Android<a hidden class="anchor" aria-hidden="true" href="#bootloader-on-android">#</a></h1>
+<ul>
+<li>Google introduces GBL rust based</li>
+<li>Developed within AOSP</li>
+<li>Designed as UEFI</li>
+<li>Firmware stack -&gt; UEFI Protocols(RNG. BlockIO) -&gt; GBL(UEFI App) -&gt; Android kernel</li>
+<li>Protocols required for GBL to work</li>
+<li>Cant understand shit she is just reading code from the slides</li>
+<li>Flattened image tree(FIT) currently used in uboot allows kernel images to be selected</li>
+<li>Boot control protocol? OTA? GBL mandates atleast two slots</li>
+<li>Boot memory protocol?</li>
+<li>Fastboot for custom transport layer</li>
+<li>Standard UEFI boot path GBL</li>
+<li>Android-16 onwards adopt GBL</li>
+<li>ESP partition has to be introduced, a mandate Now</li>
+<li>GBL can be debugged using trace32, but like rust it has different structures according to hardware</li>
+</ul>
+<h1 id="practical-perfetto-stefan-lengfeld">Practical perfetto @stefan-lengfeld<a hidden class="anchor" aria-hidden="true" href="#practical-perfetto-stefan-lengfeld">#</a></h1>
+<ul>
+<li>Perfetto, why tracing? allows you more dimension to inspect your code</li>
+<li>Tracing on android ui.perfetto.dev</li>
+<li>codeberg.org/lengfeld/perfetto-yocto-tutorial</li>
+<li>Check the above url for tutorial on perfetto</li>
+<li>In normal cases perfetto writes the configuration itself</li>
+<li>Perfetto advanced usages</li>
+<li>Built in histogram and stats</li>
+<li>Rectangle select, try that</li>
+<li>Android&rsquo;s frame timeline -&gt; every frame has additional information: jank type</li>
+<li>Android&rsquo;s logcat support works only with userdebug builds</li>
+<li>Another server level tip is binder and flows</li>
+<li>Checkout release notes of perfetto for some awesome stuff</li>
+</ul>
+<h1 id="writing-for-machines">Writing for machines<a hidden class="anchor" aria-hidden="true" href="#writing-for-machines">#</a></h1>
+<ul>
+<li>Came late as I had to go for a short bathroom break</li>
+<li>Context gap</li>
+<li>Three different things: Rule files, Specs, Prompting pattern</li>
+<li>Agents.md should be cut to the chase</li>
+<li>First things to do after this session</li>
+<li>Couldn&rsquo;t understand a lot of stuff but it was kind-of good to look into, refer pdf</li>
+</ul>
+<h1 id="agentic-delivery">Agentic Delivery<a hidden class="anchor" aria-hidden="true" href="#agentic-delivery">#</a></h1>
+<ul>
+<li>Refer from slides</li>
+</ul>
+<p>&mdash; End of Event &mdash;</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://codernakul.github.io/tags/conference/">Conference</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://codernakul.github.io/posts/minimal-android-env/">
+    <span class="title">Next »</span>
+    <span>Minimal Android Dev Setup</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://codernakul.github.io/">n4ku1</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

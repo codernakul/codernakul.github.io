@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Conference on n4ku1</title>
+    <link>https://codernakul.github.io/tags/conference/</link>
+    <description>Recent content in Conference on n4ku1</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://codernakul.github.io/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OS Summit 2026</title>
+      <link>https://codernakul.github.io/posts/ossummit-2026/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://codernakul.github.io/posts/ossummit-2026/</guid>
+      <description>I went to OS Summit India 2026 thanks to LF Foundation</description>
+    </item>
+  </channel>
+</rss>
